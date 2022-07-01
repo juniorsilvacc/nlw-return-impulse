@@ -1,9 +1,7 @@
 <h1 align="center">NLW Return Impulse</h1>
 <p align="center">Trilha Impulse do NLW Return.</p>
 
-<p align="center">
-  <img src="./.github/icon.svg" />
-</p>
+![258e205e-5ec3-4229-817c-6890c91ba5f4](https://user-images.githubusercontent.com/43589505/176956009-1d3c73c9-eebb-4a56-b503-c88c7d071b1e.png)
 
 ## Sobre :pencil:
 
