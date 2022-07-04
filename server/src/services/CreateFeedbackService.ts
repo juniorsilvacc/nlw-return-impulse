@@ -14,6 +14,10 @@ class CreateFeedbackService {
   ) {}
 
   async execute({ type, comment, screenshot }: IFeedback) {
+    if (screenshot && !screenshot.startsWith("data:image/png;base64")) {
+      throw new Error("Invalid screenshot format.");
+    }
+
     await this.feedbacksRepository.create({
       type,
       comment,
