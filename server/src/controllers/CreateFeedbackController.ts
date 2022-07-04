@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { FeedbacksRepository } from "../repositories/implementations/FeedbacksRepository";
+import { SendMailRepository } from "../repositories/implementations/SendMailRepository";
 import { CreateFeedbackService } from "../services/CreateFeedbackService";
 
 class CreateFeedbackController {
@@ -7,8 +8,10 @@ class CreateFeedbackController {
     const { type, comment, screenshot } = request.body;
 
     const feedbacksRepository = new FeedbacksRepository();
+    const sendMailRepository = new SendMailRepository();
     const createFeedbackService = new CreateFeedbackService(
-      feedbacksRepository
+      feedbacksRepository,
+      sendMailRepository
     );
 
     const feedback = await createFeedbackService.execute({
